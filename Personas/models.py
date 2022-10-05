@@ -5,4 +5,5 @@ class Persona(models.Model):
     nombre = models.CharField(max_length=10)
     apellido = models.CharField(max_length=10)
     edad = models.IntegerField()
+    fecha = models.DateField(null = True)
     

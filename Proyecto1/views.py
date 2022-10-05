@@ -4,7 +4,7 @@ from datetime import datetime
 from Personas.models import Persona
 
 def ver_personas(request, nombre, apellido, edad):
-    persona = Persona(nombre = nombre, apellido = apellido, fecha_nacimiento = datetime.now().year - edad)
+    persona = Persona(nombre = nombre, apellido = apellido, edad = edad, fecha = datetime.now().year - edad)
     persona.save()
     persona = Persona.objects.all()
     
