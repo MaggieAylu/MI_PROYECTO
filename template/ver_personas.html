@@ -5,11 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personas</title>
+</head>
 <body>
-    <p>Listado de personas:</p>
-    {% for persona in persona %}
-        <li>nombre: {{persona.nombre}} apellido: {{persona.apellido}} edad: {{persona.edad}} fecha de nacimiento: {{persona.fecha_de_nacimiento}}</li>
-    {% endfor %}
-
+    <h1>Tabla de personas:</hi>
+    <h1><table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col" class="text-center">Edad</th>
+                <th scope="col" class="text-right">Fecha de nacimiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for persona in persona %}
+            <tr>
+                <td style="color:purple">{{persona.nombre}}</td>
+                <td style="color:purple">{{persona.apellido}}</td>
+                <td style="color:purple">{{persona.edad}}</td>
+                <td style="color:purple">{{persona.fecha_de_nacimiento}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table></h1>
 </body>
 </html>
