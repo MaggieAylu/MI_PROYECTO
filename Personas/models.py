@@ -2,8 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Persona(models.Model):
-    nombre = models.CharField(max_length=10)
-    apellido = models.CharField(max_length=10)
+    nombre = models.CharField(max_length=20)
+    apellido = models.CharField(max_length=20)
     edad = models.IntegerField()
-    fecha = models.DateField(null = True)
-    
+    fecha_de_creacion = models.DateField(null = True)
